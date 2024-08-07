@@ -1,6 +1,6 @@
 from ContaBancaria import ContaBancaria
 
-class Operations:
+class ExecOperationsConta:
 
     def __init__(self, conta1: ContaBancaria, conta2: ContaBancaria):
         self.conta1 = conta1
@@ -28,6 +28,9 @@ class Operations:
         print(self.options)
 
     def add_option(self, option, function):
+        if option in self.operations:
+            raise Exception(f"Option {option} already exists.")
+
         self.operations[option] = function
         self.options += f"{option}. {function.__name__}\n"
 

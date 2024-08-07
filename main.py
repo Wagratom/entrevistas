@@ -1,7 +1,7 @@
 from ContaBancaria import ContaBancaria
-from Operations import Operations
+from ExecOperationsConta import ExecOperationsConta
 
-def handle_order_client(operation: Operations):
+def handle_order_client(operation: ExecOperationsConta):
     while True:
         try:
             operation.show_options()
@@ -13,11 +13,11 @@ def handle_order_client(operation: Operations):
 
 
 if __name__ == "__main__":
-    op = Operations(None, None)
+    op = ExecOperationsConta(None, None)
     conta1_saldo_inicial = op.get_input_value("Informe o saldo inicial da conta 1: R$")
     conta2_saldo_inicial = op.get_input_value("Informe o saldo inicial da conta 2: R$")
     conta1 = ContaBancaria(conta1_saldo_inicial)
     conta2 = ContaBancaria(conta2_saldo_inicial)
 
-    handle_order_client(Operations(conta1, conta2))
+    handle_order_client(ExecOperationsConta(conta1, conta2))
 
