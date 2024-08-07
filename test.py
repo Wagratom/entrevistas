@@ -27,6 +27,7 @@ class TestOperations(unittest.TestCase):
 			conta1.depositar(-500)
 		self.assertEqual(str(context.exception), "Invalid value for deposit. Deposit not performed.")
 
+
 	#########################
 	# Invalid saques
 	#########################
@@ -41,6 +42,7 @@ class TestOperations(unittest.TestCase):
 		with self.assertRaises(Exception) as context:
 			conta1.sacar(1500)
 		self.assertEqual(str(context.exception), "Insufficient balance. Operation not performed.")
+
 
 	#########################
 	# Invalid transferencias
@@ -59,5 +61,31 @@ class TestOperations(unittest.TestCase):
 			conta1.transferir(conta2, 1500)
 		self.assertEqual(str(context.exception), "Cannot transfer more than the balance!")
 
+
+	#########################
+	# invalid initial balance
+	#########################
+	def test_saldo_inicial_invalido(self):
+		with self.assertRaises(Exception) as context:
+			ContaBancaria(-1000)
+		self.assertEqual(str(context.exception), "Invalid initial balance. Account not created.")
+
+
+	#########################
+	# invalid integer
+	#########################
+	def test_invalid_integer(self):
+		conta1 = ContaBancaria(1000)
+		with self.assertRaises(Exception) as context:
+			conta1.depositar("a")
+		self.assertEqual(str(context.exception), "Invalid value. Value must be an integer.")
+
+		with self.assertRaises(Exception) as context:
+			conta1.sacar("b")
+		self.assertEqual(str(context.exception), "Invalid value. Value must be an integer.")
+
+		with self.assertRaises(Exception) as context:
+			conta1.transferir(conta1, "c")
+		self.assertEqual(str(context.exception), "Invalid value. Value must be an integer.")
 if __name__ == "__main__":
 	unittest.main()
