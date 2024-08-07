@@ -1,8 +1,7 @@
-from ContaBancaria import ContaBancaria
-
+from ContaBancariaInterface import ContaBancariaInterface
 class ExecOperationsConta:
 
-    def __init__(self, conta1: ContaBancaria, conta2: ContaBancaria):
+    def __init__(self, conta1: ContaBancariaInterface, conta2: ContaBancariaInterface):
         self.conta1 = conta1
         self.conta2 = conta2
         self.options = self.basic_options()

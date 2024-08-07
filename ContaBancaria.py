@@ -1,5 +1,7 @@
+from ContaBancariaInterface import ContaBancariaInterface
 # resolvi aceitar o valor 0
-class ContaBancaria :
+
+class ContaBancaria(ContaBancariaInterface):
     def __init__(self, saldo_inicial=0):
         self.saldo = self.get_valid_number(saldo_inicial)
         if self.saldo < 0:
