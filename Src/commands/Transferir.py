@@ -19,3 +19,6 @@ class Transferir(CommandsInterface):
 		except ValueError as e:
 			print(f"\033[91mErro: {e}\033[0m")
 			return False
+		except Exception as e:
+			print(f"\033[91mErro: {e}\033[0m")
+			return False
