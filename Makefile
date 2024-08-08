@@ -3,15 +3,15 @@ t ?= teste
 
 
 start:
-	python Src/main.py
+	@python Src/main.py
 
 tests:
-	python -m unittest discover -s $(testDIR)** -p "*.py"
+	@python -m unittest discover -s $(testDIR)** -p "*.py"
 test:
-		python -m unittest discover -s $(testDIR)** -p "$(t).py"
+	@python -m unittest discover -s $(testDIR)** -p "$(t).py"
 
 clear:
-	find . -name "*.pyc" -exec rm -f {} \;
+	@find . -name "*.pyc" -exec rm -f {} \;
 
 help:
 	@echo "start         - Start the program"

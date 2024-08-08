@@ -3,9 +3,6 @@ from interfaces.CommandsInterface import CommandInterface
 
 class Transferir(CommandInterface):
 	def __init__(self, conta1: ContaBancariaInterface, conta2: ContaBancariaInterface, valor: int):
-		print('conta1', conta1)
-		print('conta2', conta2)
-		print('valor', valor)
 		super().__init__(conta1, valor, conta2=conta2)
 
 	def valid_number(self):

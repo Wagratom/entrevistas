@@ -1,7 +1,7 @@
 from interfaces.ContaBancariaInterface import ContaBancariaInterface
 from interfaces.CommandsInterface import CommandInterface
 
-class DepositarItau(CommandInterface):
+class Depositar(CommandInterface):
 	def __init__(self, conta1: ContaBancariaInterface, valor: int):
 		super().__init__(conta1, valor)
 		self.taxa = 0.1

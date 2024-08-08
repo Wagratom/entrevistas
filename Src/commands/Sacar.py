@@ -3,7 +3,6 @@ from interfaces.CommandsInterface import CommandInterface
 
 class Sacar(CommandInterface):
 	def __init__(self, conta1: ContaBancariaInterface, valor: int):
-		print('contructor valor: ', valor)
 		super().__init__(conta1, valor)
 
 	def valid_number(self):
