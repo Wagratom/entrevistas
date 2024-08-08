@@ -61,7 +61,7 @@ class HandleOperations:
 
 	def transferir(self):
 		value = self.get_input_value("Informe o valor a ser transferido: R$")
-		command = transferir(self.conta1, value, self.conta2)
+		command = transferir(self.conta1, self.conta2, value)
 		command.execute()
 
 	def exit(self):

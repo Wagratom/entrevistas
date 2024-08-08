@@ -12,3 +12,44 @@ Enquanto estava na academia, fiquei refletindo sobre o código — típico de um
 
 ### Resumindo
 Acabei misturando bastante as coisas e no fim não segui um designer a risca, misturei `Strategy` com `Adapter`. Não sei se teria um problema nisso, mas no fim acho que meu codigo ficou bem desaclopado, escalavel e componentilizado, acho que consigo trocar bastante peças sem precisar mexer em outros componentes. Enfim, alguem mais experiente vai me confirmar se estou certo.
+
+
+### Programa
+
+Aqui está um resumo rápido para clonar e testar o código localmente.
+
+## ⚙️ instaling
+
+Clone o repositório e navegue até o diretório do projeto:
+
+```
+git clone git@github.com:Wagratom/entrevistas.git
+cd entrevistas
+```
+
+### Start
+Para iniciar o código, estando dentro do diretório do projeto, execute:
+
+```
+make
+```
+
+### Tests
+Para rodar todos os testes automatizados, utilize:
+
+```
+make tests
+```
+
+Se precisar rodar um teste específico, passe o nome do teste como parâmetro:
+
+```
+make test t=<name>
+```
+
+### Help
+Para visualizar todos os comandos disponíveis e obter mais informações, execute:
+
+```
+make help
+```
