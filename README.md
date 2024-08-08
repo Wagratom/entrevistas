@@ -53,3 +53,6 @@ Para visualizar todos os comandos disponíveis e obter mais informações, execu
 ```
 make help
 ```
+
+#### obs 🤓
+Se você não conseguir usar o `make/Makefile` no seu ambiente, você pode simplesmente replicar os comandos manualmente através da linha de comando.
