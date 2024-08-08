@@ -3,6 +3,7 @@ from interfaces.CommandsInterface import CommandInterface
 
 class Sacar(CommandInterface):
 	def __init__(self, conta1: ContaBancariaInterface, valor: int):
+		print('contructor valor: ', valor)
 		super().__init__(conta1, valor)
 
 	def valid_number(self):
@@ -13,13 +14,11 @@ class Sacar(CommandInterface):
 	def valid_account(self):
 		if not self.conta1:
 			raise ValueError("Account not found")
-		if not isinstance(self.conta1, CommandInterface):
+		if not isinstance(self.conta1, ContaBancariaInterface):
 			raise ValueError("Invalid account")
 
 	def execute(self):
-		try:
-			self.conta1.sacar(self.valor)
-		except ValueError as e:
-			print(f"\033[91mErro: {e}\033[0m")
-		except Exception as e:
-			print(f"\033[91mErro: {e}\033[0m")
+		self.valid_number()
+		self.valid_account()
+		self.conta1.sacar(self.valor)
+
