@@ -1,5 +1,9 @@
-from ..ContaBancaria import ContaBancaria
 import unittest
+import sys
+import os
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from ContaBancaria import ContaBancaria
 
 
 class TestOperations(unittest.TestCase):

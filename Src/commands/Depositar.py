@@ -14,18 +14,14 @@ class DepositarItau(CommandInterface):
 	def valid_account(self):
 		if not self.conta1:
 			raise ValueError("Account not found")
-		if not isinstance(self.conta1, CommandInterface):
+		if not isinstance(self.conta1, ContaBancariaInterface):
 			raise ValueError("Invalid account")
 
 	def add_tax(self):
 		self.valor = self.valor * (1 - self.taxa)
 
 	def execute(self):
-		try:
-			self.add_tax()
-			self.valid_number()
-			self.conta1.depositar(self.valor)
-		except ValueError as e:
-			print(f"\033[91mErro: {e}\033[0m")
-		except Exception as e:
-			print(f"\033[91mErro: {e}\033[0m")
+		self.valid_number()
+		self.valid_account()
+		self.add_tax()
+		self.conta1.depositar(self.valor)
