@@ -1,6 +1,6 @@
 # ContaBancaria
 
-Este código foi criado com o propósito de resolver o case. O [link]("https://github.com/andersonshindi/ContaBancaria/") já fornece uma boa explicação sobre o que o código deve fazer, então vou compartilhar minhas dificuldades e abordagens.
+Este código foi criado com o propósito de resolver o case. O [link](https://github.com/andersonshindi/ContaBancaria/) já fornece uma boa explicação sobre o que o código deve fazer, então vou compartilhar minhas dificuldades e abordagens.
 
 Embora o código seja relativamente simples, o desafio principal foi o item 4: `aplique code review e refatore conforme as melhores práticas do SOLID, patterns, etc.` Eu já ouvi falar muito sobre SOLID, já estudei, mas às vezes tenho dificuldade em lembrar a aplicação prática de cada princípio.
 
