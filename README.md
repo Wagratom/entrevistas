@@ -56,3 +56,30 @@ make help
 
 #### obs 🤓
 Se você não conseguir usar o `make/Makefile` no seu ambiente, você pode simplesmente replicar os comandos manualmente através da linha de comando.
+
+
+# Case 2
+
+O case 2 era sobre projetar uma arquiterua de PIX segundo as seguintes regras
+
+ - O Sistema deverá ser capaz de receber a ordem de transferência e efetivar o debito(-) na conta do solicitante antes de
+creditar(+) a conta do cliente destinatário
+ - O Sistema deverá guardar um histórico de todas as transações por 5 anos
+ - Ser compatível com Android e IOS
+ - Início com 100 transações diárias, com perspectiva de crescimento para 20 milhões por dia em até 1 ano
+ - Ter uma solução com resiliência entre as peças, garantindo assim uma disponibilidade(uptime) superior a 99%
+ - Possuir Logs e Métricas de uso
+
+OBS:
+Requisitos de segurança não são obrigatórios, mas podem haver perguntas relacionadas
+FrontEnd e Apps não fazem parte do escopo do desenho, mas sua sinalização é importante
+Utilize a ferramenta Drawio para construção do arquitetura
+Não existe resposta certa ou errada. O Objetivo é avaliar a linha de raciocínio do colaborador
+
+### Resultado
+Pensei em contar um pouco também de como cheguei nesse resultado, mas resulvi explicar na hora da review
+
+logs em 5 anos: https://docs.aws.amazon.com/pt_br/AmazonS3/latest/userguide/lifecycle-configuration-examples.html
+
+
+![um diagrama mostrando os diferentes componentes de um sistema de computação em nuvem e como eles funcionam juntos, mecanismo de fluxo de trabalho empresarial, lambda, visualização dinâmica, diagrama legível, diagrama de conceito arquitetônico, diagrama, mix com arquitetura rivendell, colaboração infinita com ia, arquitetura complexa, diagramas detalhados, arquitetura cibernética, arquitetura limpa, gráfico de cena de jogo, aplicativo, interoperabilidade de lentes, arquitetura warcraft, data center extremamente detalhado, um diagrama de wireframe, esquemático, redshift. micro detalhes](./plataformaPix.drawio.png)
